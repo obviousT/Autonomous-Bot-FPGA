@@ -1,0 +1,27 @@
+# Quartus
+db/
+incremental_db/
+output_files/
+simulation/
+*.rpt
+*.summary
+*.sof
+*.pof
+*.pin
+*.jdi
+*.smsg
+*.qws
+
+# Vivado
+.Xil/
+*.jou
+*.log
+*.str
+*.pb
+*.wdb
+*.dir/
+
+# General Verilog/FPGA
+*.bak
+*.sim
+*.vcd
