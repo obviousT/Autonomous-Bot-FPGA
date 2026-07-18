@@ -17,7 +17,7 @@ A Verilog RTL design for an autonomous maze-solving robot implemented on an Inte
 - [UART Telemetry Protocol](#uart-telemetry-protocol)
 - [Build & Program](#build--program)
 - [Repository Layout](#repository-layout)
-- [Known Issues / TODO](#known-issues--todo)
+
 
 ---
 
@@ -223,11 +223,5 @@ ALL_IN_ONE/
 
 ---
 
-## Known Issues / TODO
 
-- **`us_sensor` port mismatch:** `ir_and_us.v` instantiates `us_sensor` positionally with 6 ports, but `us_sensor.v` defines 5 (no obstacle output). Align the port lists.
-- **Unconnected motor config inputs:** `LEFT_CYCLE`, `RIGHT_CYCLE`, `UTURN_CYCLE`, `BEFORE_CYCLE`, `AFTER_CYCLE` are not wired at the top level and default to 0 (turns complete instantly). Drive them from parameters or registers.
-- **Duplicate sensor wrapper:** `IR_AND_US` (path_controller.v) and `ir_and_us` (ir_and_us.v) coexist; only the lowercase one is used — consider removing the stale one.
-- **Reset inconsistencies:** `servo` comments say "active high" but code is active-low; `pwm_generator` and `servo_pwm` have no reset (rely on init value).
-- **Dead code:** `test_mpi` is never instantiated.
 ```
